@@ -20,7 +20,10 @@ fast = list;
 slow = list;
 while (fast != NULL && slow != NULL)
 {
+if (fast->next != NULL)
+{
 fast = fast->next->next;
+}
 slow = slow->next;
 if (fast == slow)
 return(1);
