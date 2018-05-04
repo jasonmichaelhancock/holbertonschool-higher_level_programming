@@ -1,0 +1,31 @@
+>>> add_integer = __import__("0-add_integer").add_integer
+
+from 0-add_integer import add_integer
+
+>>> add_integer (1, 1)
+2
+
+>>> add_integer ("pam", 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer (1, "pam")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer (None, 1)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer (1, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer (1, -2)
+-1
+
+>>> add_integer (-1, 2)
+1
+
+>>> add_integer (1)
+99
