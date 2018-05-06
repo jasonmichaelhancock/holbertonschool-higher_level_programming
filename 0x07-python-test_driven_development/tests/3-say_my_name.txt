@@ -1,0 +1,56 @@
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+from 3-say_my_name import say_my_name
+
+>>> say_my_name ("Jason", "Hancock")
+My name is Jason Hancock
+
+>>> say_my_name ("Jason")
+My name is Jason 
+
+>>> say_my_name (, "Hancock")
+My name is  Hancock
+
+>>> say_my_name ("Jason", "Hancock", "Seymour")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name ("Jason", 1)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name (1, "Hancock")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name ("Jason", [1, 2, 3])
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name ([1, 2, 3], "Hancock")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name ("Jason", (1, 2))
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> say_my_name ((1, 2), "Hancock")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> say_my_name ("Jason", {1: Jason, 2: Hancock})
+Traceback (most recent call last):
+NameError: name 'Jason' is not defined
+
+>>> say_my_name ({1: Jason, 2: Hancock}, "Hancock")
+Traceback (most recent call last):
+NameError: name 'Jason' is not defined
+
+>>> say_my_name (Jason, "Hancock")
+Traceback (most recent call last):
+NameError: name 'Jason' is not defined
+
+>>> say_my_name ("Jason", Hancock)
+Traceback (most recent call last):
+NameError: name 'Hancock' is not defined
