@@ -5,7 +5,7 @@ class Rectangle():
         self.__height = height
 
     def __del__(self):
-        print("Bye rectangle…")
+        print("Bye rectangle...")
 
     def area(self):
         return (self.__width) * (self.__height)
