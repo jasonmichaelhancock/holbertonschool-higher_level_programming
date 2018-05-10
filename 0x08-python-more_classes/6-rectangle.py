@@ -9,7 +9,7 @@ class Rectangle():
         type(self).number_of_instances += 1
 
     def __del__(self):
-        print("Bye rectangle…")
+        print("Bye rectangle...")
         type(self).number_of_instances -= 1
 
     def area(self):
@@ -47,8 +47,9 @@ class Rectangle():
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
-            print("")
-        return ((("#" * self.__width) + ('\n')) * (self.__height - 1)) + ("#" * self.__width)
+            return("")
+        return ((("#" * self.__width) + ('\n')) * (self.__height - 1)) \
+            + ("#" * self.__width)
 
     def __repr__(self):
         return("Rectangle({}, {})".format(self.width, self.height))
