@@ -9,7 +9,7 @@ class Rectangle():
         type(self).print_symbol
 
     def __del__(self):
-        print("Bye rectangle…")
+        print("Bye rectangle...")
         type(self).number_of_instances -= 1
 
     def area(self):
