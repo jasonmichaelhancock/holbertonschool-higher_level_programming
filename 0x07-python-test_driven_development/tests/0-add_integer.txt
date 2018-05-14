@@ -27,17 +27,20 @@ TypeError: b must be an integer
 >>> add_integer (1)
 99
 
->>> add_integer(100.3, -2)
+>>> add_integer (100.3, -2)
 98
 
->>> add_integer(1, (2))
+>>> add_integer (1, (2))
 3
 
->>> add_integer((1), 2)
+>>> add_integer ((1), 2)
 3
 
 >>> add_integer (1, 1)
 2
+
+>>> add_integer ((float('inf')), 1)
+89
 
 >>> add_integer([1, 2, 3], 1)
 Traceback (most recent call last):
