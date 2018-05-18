@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 def pascal_triangle(n):
-    l = [1]
+    outter = []
+    if n <= 0:
+        return outter
     for i in range(n):
-        newlist = []
-        newlist.append(l[0])
-        for i in range(len(l) - 1):
-            newlist.append(l[i] + l[i+1])
-        newlist.append(l[-1])
-        l.append(newlist)
-    return l
+        thelist = []
+        for j in range(i + 1):
+            if j == 0 or j == i:
+                thelist.append(1)
+            else:
+                thelist.append(outter[i-1][j-1] + outter[i-1][j])
+        outter.append(thelist)
+    return outter
