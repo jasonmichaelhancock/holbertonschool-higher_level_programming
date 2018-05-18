@@ -1,0 +1,6 @@
+>>> print_sorted = __import__("1-my_list").print_sorted
+
+from 1-my_list import print_sorted
+
+>>> print_sorted [1, 2, 3, 5, 4]
+[1, 2, 3, 4, 5]
