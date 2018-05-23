@@ -89,7 +89,7 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
-        """Function returns string representation of the display function."""
+        """Function returns string rep of the display function."""
         return ("[Rectangle] (" + str(self.id) + ") "\
                 + str(self.x) + "/" + str(self.y) + " - "\
                 + str(self.width) + "/" + str(self.height))
