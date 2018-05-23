@@ -85,11 +85,13 @@ class Rectangle(Base):
         """Function prints the rectangle."""
         if self.width == 0:
             return
+        for i in range(self.__y):
+            print()
         for i in range(self.__height):
             print("#" * self.__width)
 
     def __str__(self):
         """Function returns string rep of the display function."""
-        return ("[Rectangle] (" + str(self.id) + ") " \
-                + str(self.x) + "/" + str(self.y) + " - " \
+        return ("[Rectangle] (" + str(self.id) + ") "
+                + str(self.x) + "/" + str(self.y) + " - "
                 + str(self.width) + "/" + str(self.height))
