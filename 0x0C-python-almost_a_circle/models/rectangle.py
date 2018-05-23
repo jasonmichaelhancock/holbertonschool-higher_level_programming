@@ -83,7 +83,7 @@ class Rectangle(Base):
 
     def display(self):
         """Function prints the rectangle."""
-        if width == 0:
+        if self.width == 0:
             return
         for i in range(self.__height):
             print("#" * self.__width, end="")
