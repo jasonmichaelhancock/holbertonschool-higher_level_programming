@@ -4,11 +4,15 @@ Module documentation.
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     This clas inherits from Base.
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Initializes Rectangle.
+        """
         self.width = width
         self.height = height
         self.x = x
@@ -56,6 +60,9 @@ class Rectangle(Base):
             return self.__x
 
         @x.setter
+        """
+        Sets the x value of the rectangle.
+        """
         def x(self, value):
             if not isinstance(value, int):
                 raise TypeError("x must be an integer")
@@ -68,6 +75,9 @@ class Rectangle(Base):
             return self.__y
 
         @y.setter
+        """
+        Sets the y value of the rectangle.
+        """
         def y(self, value):
             if not isinstance(value, int):
                 raise TypeError("y must be an integer")
