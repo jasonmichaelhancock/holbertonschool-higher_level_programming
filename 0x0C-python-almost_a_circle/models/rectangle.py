@@ -92,6 +92,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """Function returns string rep of the display function."""
-        return ("[Rectangle] (" + str(self.id) + ") "
-                + str(self.x) + "/" + str(self.y) + " - "
-                + str(self.width) + "/" + str(self.height))
+        return "[Rectangle] (" + str(self.id) + ") " \
+                + str(self.x) + "/" + str(self.y) + " - " \
+                + str(self.width) + "/" + str(self.height)
