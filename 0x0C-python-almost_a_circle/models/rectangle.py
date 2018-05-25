@@ -96,3 +96,14 @@ class Rectangle(Base):
         return "[Rectangle] (" + str(self.id) + ") " \
                 + str(self.x) + "/" + str(self.y) + " - " \
                 + str(self.width) + "/" + str(self.height)
+
+    def update(self, *args, **kwargs):
+        if args is not None and len(args) > 0:
+            c = 0
+            attrs = ["id", "width", "height", "x", "y"]
+            for arg in args:
+                setattr(self, attrs[c], args[c])
+                c += 1
+        elif kwargs is not None and len(kwargs) > 0:
+            for k, v in kwargs.items:
+                setattr(self, k, v)
