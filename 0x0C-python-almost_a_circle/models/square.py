@@ -51,3 +51,18 @@ class Square(Rectangle):
         elif kwargs is not None and len(kwargs) > 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Adds items to a_dict."""
+        a_dict = {}
+        key = ["id", "size", "size", "x", "y"]
+        for i in range(len(key)):
+            if key[i] == "id":
+                a_dict[key[i]] = self.id
+            if key[i] == "width":
+                a_dict[key[i]] = self.size
+            if key[i] == "x":
+                a_dict[key[i]] = self.x
+            if key[i] == "y":
+                a_dict[key[i]] = self.y
+        return a_dict
