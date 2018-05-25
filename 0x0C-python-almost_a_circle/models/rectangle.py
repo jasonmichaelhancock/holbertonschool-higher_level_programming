@@ -98,6 +98,7 @@ class Rectangle(Base):
                 + str(self.width) + "/" + str(self.height)
 
     def update(self, *args, **kwargs):
+        """Function updates the arguments."""
         if args is not None and len(args) > 0:
             c = 0
             attrs = ["id", "width", "height", "x", "y"]
