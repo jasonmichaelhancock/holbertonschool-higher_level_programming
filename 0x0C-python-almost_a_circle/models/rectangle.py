@@ -110,6 +110,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Adds items to a_dict."""
         a_dict = {}
         key = ["id", "width", "height", "x", "y"]
         for i in range(len(key)):
