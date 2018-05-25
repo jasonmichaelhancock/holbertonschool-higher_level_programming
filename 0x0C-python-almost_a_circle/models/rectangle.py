@@ -108,3 +108,19 @@ class Rectangle(Base):
         elif kwargs is not None and len(kwargs) > 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        a_dict = {}
+        key = ["id", "width", "height", "x", "y"]
+        for i in range(len(key)):
+            if key[i] == "id":
+                a_dict[key[i]] = self.id
+            if key[i] == "width":
+                a_dict[key[i]] = self.width
+            if key[i] == "height":
+                a_dict[key[i]] = self.height
+            if key[i] == "x":
+                a_dict[key[i]] = self.x
+            if key[i] == "y":
+                a_dict[key[i]] = self.y
+        return a_dict
