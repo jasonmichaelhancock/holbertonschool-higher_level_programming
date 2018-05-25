@@ -107,4 +107,4 @@ class Rectangle(Base):
                 c += 1
         elif kwargs is not None and len(kwargs) > 0:
             for key, value in kwargs.items:
-                setattr(self, k, v)
+                setattr(self, key, value)
