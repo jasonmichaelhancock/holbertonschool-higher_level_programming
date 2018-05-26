@@ -12,7 +12,6 @@ class Square(Rectangle):
     This class inherits from Rectangle.
     """
 
-
     def __init__(self, size, x=0, y=0, id=None):
         """
         Initializes a Square.
@@ -22,8 +21,8 @@ class Square(Rectangle):
     def __str__(self):
         """Function returns string rep of the display function."""
         return "[Square] (" + str(self.id) + ") " \
-                + str(self.x) + "/" + str(self.y) + " - " \
-                + str(self.width)
+            + str(self.x) + "/" + str(self.y) + " - " \
+            + str(self.width)
 
     @property
     def size(self):

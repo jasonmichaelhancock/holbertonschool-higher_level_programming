@@ -11,6 +11,7 @@ class Rectangle(Base):
     """
     This clas inherits from Base.
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes Rectangle.
@@ -94,8 +95,8 @@ class Rectangle(Base):
     def __str__(self):
         """Function returns string rep of the display function."""
         return "[Rectangle] (" + str(self.id) + ") " \
-                + str(self.x) + "/" + str(self.y) + " - " \
-                + str(self.width) + "/" + str(self.height)
+            + str(self.x) + "/" + str(self.y) + " - " \
+            + str(self.width) + "/" + str(self.height)
 
     def update(self, *args, **kwargs):
         '''assigns an argument to each attribute'''

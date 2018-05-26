@@ -37,7 +37,7 @@ class Base:
         content = []
         for i in range(len(list_objs)):
             content.append(cls.to_dictionary(list_objs[i]))
-        with open(filename, mode = 'w', encoding = 'utf-8') as a_file:
+        with open(filename, mode='w', encoding='utf-8') as a_file:
             a_file.write(cls.to_json_string(content))
 
     @staticmethod
