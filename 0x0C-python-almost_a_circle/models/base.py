@@ -52,9 +52,25 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """Function creates dictionary from file."""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         if cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Function returns a list of instances."""
+        filename = "{:s}.json".format(cls.__name__)
+        try:
+            with open(filename, mode='w', encoding='utf-8') as a_file:
+                content_string = a_file.read
+            a_list = from_json_string(content_string)
+            list_instance = []
+            for i in range(len(a_list)):
+                list_instance.append(cls.create(**a_list[i]))
+        except:
+            list_instances = []
+        return list_instances
