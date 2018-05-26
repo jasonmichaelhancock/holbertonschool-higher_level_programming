@@ -74,3 +74,11 @@ class Base:
         except:
             list_instances = []
         return list_instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Saves to a file in CVS format."""
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Loads from a CVS file."""
