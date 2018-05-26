@@ -39,3 +39,13 @@ class Base:
             content.append(cls.to_dictionary(list_objs[i]))
         with open(filename, mode = 'w', encoding = 'utf-8') as a_file:
             a_file.write(cls.to_json_string(content))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Function returns a list of a JSON string rep."""
+        if json_string is None:
+            return ("[]")
+        if len(json_string) == 0:
+            return ("[]")
+        else:
+            return json.loads(json_string)
