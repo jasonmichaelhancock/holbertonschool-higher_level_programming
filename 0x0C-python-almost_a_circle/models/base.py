@@ -45,7 +45,7 @@ class Base:
         """Function returns a list of a JSON string rep."""
         if json_string is None:
             return ("[]")
-        if len(json_string) == 0:
+        if (json_string) == []:
             return ("[]")
         else:
             return json.loads(json_string)
