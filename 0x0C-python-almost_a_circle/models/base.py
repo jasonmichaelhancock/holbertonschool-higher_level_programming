@@ -12,6 +12,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """ Initialize the Base Class."""
         self.id = id
         if self.id is not None:
             self.id = id
@@ -20,7 +21,7 @@ class Base:
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
-        """ """
+        """Function returns JSON represeantion of dictionary. """
         if list_dictionaries is None:
             return ("[]")
         else:
