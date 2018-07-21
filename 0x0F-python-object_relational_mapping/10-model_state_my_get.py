@@ -14,8 +14,9 @@ if __name__ == "__main__":
 
     session = Session()
     input = session.query(State).filter(State.name == argv[4]).all()
-    if (input == None):
+    if len(input) > 0:
+        for input_id in input:
+            print("{}".format(input_id.id))
+    else:
         print("None Found")
-    for input_id in input:
-        print("{}".format(input_id.id))
     session.close()
