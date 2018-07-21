@@ -18,5 +18,5 @@ if __name__ == "__main__":
         for input_id in input:
             print("{}".format(input_id.id))
     else:
-        print("None Found")
+        print("Not found")
     session.close()
