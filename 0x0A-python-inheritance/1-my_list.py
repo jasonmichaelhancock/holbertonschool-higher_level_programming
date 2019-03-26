@@ -1,20 +1,14 @@
 #!/usr/bin/python3
-    '''
-    class inherits from list
-    '''
+""" module 1-my_list contains the class MyList """
+
 
 class MyList(list):
-    '''
-    class inherits from list
-    '''
+    """ defines MyList class """
+
     def __init__(self):
-        '''
-        initializes new MyList object
-        '''
+        """ initializes new MyList object """
         pass
 
     def print_sorted(self):
-        '''
-        print a sorted list
-        '''
+        """ prints sorted list """
         print(sorted(self))
